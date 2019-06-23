@@ -1,0 +1,6 @@
+# Modules
+node_modules
+
+#MISC
+.idea
+yarn.lock
