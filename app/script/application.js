@@ -74,16 +74,14 @@
 		// THIS IS HOW YOU GET ELEMENT BY ITS UNIQUE ID IDENTIFIER.
 		const applicationElement = document.getElementById('Application');
 
-		applicationElement.style.backgroundColor = '#2f619166';
+		/*applicationElement.style.backgroundColor = '#2f619166';
 		applicationElement.style.width = '70%';
-
-		
 		applicationElement.style.height = '100%';
 		applicationElement.style.display = 'flex';
 		applicationElement.style.flexDirection = 'row';
 		applicationElement.style.flexWrap = 'wrap';
 		applicationElement.style.alignItems = 'center';
-		applicationElement.style.justifyContent = 'center';
+		applicationElement.style.justifyContent = 'center';*/
 
 		// THIS IS HOW YOU LOOP THROUGH ITEMS IN OBJECT.
 		for (let key in data) {
