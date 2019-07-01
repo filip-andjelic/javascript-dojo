@@ -8,7 +8,9 @@
 			"convertedValue": "1750",
 			"name": "Monthly Salary",
 			"id": "922378655383.0779",
-			"description": "Monthly Salary",
+			"description": "Lorem ipsum dolor sit amet, sea eius soluta praesent ad, omnis nullam everti vim ex. Dicta denique inimicus eum eu, esse eirmod commune ad vis. Minimum constituto ea quo. Nominati dissentias an usu, meis audire omnesque quo ad.\n" +
+				"\n" +
+				"Pro cu autem lucilius perfecto. Labitur explicari dissentias quo eu, vix at omittam officiis. Eum an apeirian reformidans, sed an ferri dicam possit. Ei assum quaerendum vim.\n",
 			"isSingle": 0,
 			"chosenDate": "05-04-2019",
 			"date": "05-04-2019",
@@ -27,14 +29,16 @@
 			"convertedValue": "250",
 			"name": "Apartment Rent",
 			"id": "733908684996.4286",
-			"description": "Apartment Rent",
+			"description": "Lorem ipsum dolor sit amet, sea eius soluta praesent ad, omnis nullam everti vim ex. Dicta denique inimicus eum eu, esse eirmod commune ad vis. Minimum constituto ea quo. Nominati dissentias an usu, meis audire omnesque quo ad.\n" +
+				"\n" +
+				"Pro cu autem lucilius perfecto. Labitur explicari dissentias quo eu, vix at omittam officiis. Eum an apeirian reformidans, sed an ferri dicam possit. Ei assum quaerendum vim.\n",
 			"isSingle": 0,
 			"chosenDate": "10-04-2019",
 			"date": "10-04-2019",
 			"frequency": "3",
 			"type": "income",
 			"label": {"2": {"id": "2", "type": "monthlyWage", "text": "Monthly Wage", "color": "#4EA645"}},
-			"currency": {"code": "eur"},
+			"currency": {"code": "rsd"},
 			"color": "#e3e3e3",
 			"account": [],
 			"profile": {"-1": {"id": "-1", "ownership": 100}},
@@ -46,14 +50,16 @@
 			"convertedValue": "50",
 			"name": "Transport Compensation",
 			"id": "65919074823.58328",
-			"description": "Transport Compensation",
+			"description": "Lorem ipsum dolor sit amet, sea eius soluta praesent ad, omnis nullam everti vim ex. Dicta denique inimicus eum eu, esse eirmod commune ad vis. Minimum constituto ea quo. Nominati dissentias an usu, meis audire omnesque quo ad.\n" +
+				"\n" +
+				"Pro cu autem lucilius perfecto. Labitur explicari dissentias quo eu, vix at omittam officiis. Eum an apeirian reformidans, sed an ferri dicam possit. Ei assum quaerendum vim.\n",
 			"isSingle": 0,
 			"chosenDate": "22-04-2019",
 			"date": "22-04-2019",
 			"frequency": "2",
 			"type": "income",
 			"label": [],
-			"currency": {"code": "eur"},
+			"currency": {"code": "usd"},
 			"color": "#f6a2b5",
 			"account": [],
 			"profile": {"-1": {"id": "-1", "ownership": 100}},
@@ -107,8 +113,70 @@
 			transactionName.style.textAlign = 'center';
 			transactionName.style.textShadow = '1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue';
 
-
 			transactionWrapper.appendChild(transactionName);
+
+			/*let transactionDateAndFrequency = document.createElement('div');
+			let transactionDate = document.createElement('div');
+			let transactionFrequency = document.createElement('div');
+
+			transactionDate.innerHTML = 'Transaction date: ' + transactionObject.date;
+			transactionFrequency.innerHTML = 'Transaction frequency ID: ' + transactionObject.frequency;
+
+			transactionDateAndFrequency.style.display = 'flex';
+			transactionDateAndFrequency.style.alignItems = 'center';
+			transactionDateAndFrequency.style.justifyContent = 'space-between';
+			transactionDateAndFrequency.style.flexDirection = 'row';
+			transactionDateAndFrequency.style.color = '#333333';
+			transactionDateAndFrequency.style.fontSize = '14px';
+			transactionDateAndFrequency.style.padding = '10px';
+			transactionDateAndFrequency.style.textAlign = 'center';
+
+			transactionDateAndFrequency.appendChild(transactionDate);
+			transactionDateAndFrequency.appendChild(transactionFrequency);
+			transactionWrapper.appendChild(transactionDateAndFrequency);
+
+			let transactionTypeAndValue = document.createElement('div');
+			let transactionType = document.createElement('div');
+			let transactionValue = document.createElement('div');
+			let transactionValueNumber = document.createElement('span');
+
+			transactionValueNumber.innerHTML = transactionObject.value + transactionObject.currency.code;
+			transactionType.innerHTML = 'This Transaction is ' + transactionObject.type;
+			transactionValue.innerHTML = 'Value of this Transaction is ';
+
+			transactionTypeAndValue.style.display = 'flex';
+			transactionTypeAndValue.style.alignItems = 'center';
+			transactionTypeAndValue.style.justifyContent = 'space-between';
+			transactionTypeAndValue.style.flexDirection = 'row';
+			transactionTypeAndValue.style.color = '#333333';
+			transactionTypeAndValue.style.fontSize = '14px';
+			transactionTypeAndValue.style.padding = '10px';
+			transactionTypeAndValue.style.textAlign = 'center';
+
+			transactionValueNumber.style.fontSize = '16px';
+			transactionValueNumber.style.fontWeight = 'bold';
+			transactionValueNumber.style.color = 'yellow';
+
+			transactionValue.appendChild(transactionValueNumber);
+			transactionTypeAndValue.appendChild(transactionType);
+			transactionTypeAndValue.appendChild(transactionValue);
+			transactionWrapper.appendChild(transactionTypeAndValue);
+
+			let transactionDescription = document.createElement('div');
+
+			transactionDescription.innerHTML = transactionObject.description;
+
+			transactionDescription.style.display = 'flex';
+			transactionDescription.style.alignItems = 'center';
+			transactionDescription.style.flexDirection = 'row';
+			transactionDescription.style.color = '#333333';
+			transactionDescription.style.fontSize = '14px';
+			transactionDescription.style.padding = '10px';
+			transactionDescription.style.margin = '10px';
+			transactionDescription.style.border = '1px solid #333333';
+			transactionDescription.style.borderRadius = '18px';
+
+			transactionWrapper.appendChild(transactionDescription);*/
 
 			// AFTER CREATING NEW ELEMENT, IT NEEDS TO BE APPENDED TO EXISTING ELEMENT
 			// THIS IS HOW YOU INSERT NEW ELEMENT INTO YOUR PAGE.
