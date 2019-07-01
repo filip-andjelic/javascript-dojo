@@ -75,7 +75,9 @@
 		const applicationElement = document.getElementById('Application');
 
 		applicationElement.style.backgroundColor = '#2f619166';
-		applicationElement.style.width = '100%';
+		applicationElement.style.width = '70%';
+
+		
 		applicationElement.style.height = '100%';
 		applicationElement.style.display = 'flex';
 		applicationElement.style.flexDirection = 'row';
