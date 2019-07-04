@@ -75,6 +75,7 @@
 		const applicationElement = document.getElementById('Application');
 
 		applicationElement.style.backgroundColor = '#2f619166';
+		//applicationElement.style.backgroundColor = 'red';
 		applicationElement.style.width = '100%';
 		applicationElement.style.height = '100%';
 		applicationElement.style.display = 'flex';
@@ -114,6 +115,86 @@
 			transactionName.style.textShadow = '1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue';
 
 			transactionWrapper.appendChild(transactionName);
+            
+            
+            ///////////////////////////////////////////////////////////
+            
+            //DACA PROGRAMIRA
+            
+             //Pravim dva div-a za date i frequency
+            var transactionDate = document.createElement('div');
+            var transactionFrequency = document.createElement('div');
+            
+            //Ispisujem tekst za date
+            transactionDate.innerHTML = 'Transaction date: ' + transactionObject.date;
+            
+            //Ispisujem tekst za frequency
+            transactionFrequency.innerHTML = 'Transaction frequency ID:'+ transactionObject.frequency;
+            
+            // Apendujem na postojeci Wrapper div da bi se prikazali
+            transactionWrapper.appendChild(transactionDate);
+            transactionWrapper.appendChild(transactionFrequency);
+            
+           
+            //Stilizovanje 
+            
+            transactionDate.style.float = 'left';
+            transactionDate.style.padding = '5px 10px';
+            transactionFrequency.style.float = 'right';
+            transactionFrequency.style.padding = '5px 10px';
+            
+            
+            // Pravim sledeca dva div-a za vrstu transakcije i vrednost trans
+            var transactionType = document.createElement('div');
+            var transactionValue = document.createElement('div');
+            
+            
+            //Ispisujem tekst za vrstu transakcije
+            transactionType.innerHTML = 'This transaction is '+ transactionObject.type;
+            
+            //Ispsisujem tekst za vrednost transakcije
+            transactionValue.innerHTML = 'Value of this Transaction is ' + ' ' + '<span style="font-weight:bold; color:yellow ">' +   transactionObject.value + ' ' + transactionObject.currency.code + '</span>';
+            
+            // Apendujem na postojeci Wrapper div da bi se prikazali
+            transactionWrapper.appendChild(transactionType);
+            transactionWrapper.appendChild(transactionValue);
+            
+            //Stilizovanje 
+            transactionType.style.clear = 'both';
+            transactionType.style.float = 'left';
+            transactionType.style.padding = '5px 10px';
+            transactionValue.style.float = 'right';
+            transactionValue.style.padding = '5px 10px';
+            transactionValue.style.marginBottom = '15px';
+            
+            //bold.style.color = "yellow";
+            //bold.style.fontWeight = "bold";
+            //bold.style.fontSize = "15px";
+            
+            
+            
+            
+            //Pravim poslednji div za opis 
+            var transactionDesc = document.createElement('div');
+            
+            //Ispisivanje teksta
+            transactionDesc.innerHTML = ' ' + transactionObject.description;
+            
+            //Apendovanje na postojeci Wrapper
+            transactionWrapper.appendChild(transactionDesc);
+            
+            //Stilizovanje 
+            transactionDesc.style.clear = 'both';
+            transactionDesc.style.padding = '15px';
+            transactionDesc.style.border = '1px solid black';
+            transactionDesc.style.borderRadius = '16px';
+            transactionDesc.style.margin = '20px 10px';
+            transactionDesc.style.marginTop = '50px';
+            
+            
+            ///////////////////////////////////////////////////
+            
+            
 
 			/*let transactionDateAndFrequency = document.createElement('div');
 			let transactionDate = document.createElement('div');
