@@ -126,7 +126,7 @@
             var transactionFrequency = document.createElement('div');
             
             //Ispisujem tekst za date
-            transactionDate.innerHTML = 'Transaction date: ' + transactionObject.date;
+            transactionDate.innerHTML = 'Transaction date : ' + transactionObject.date;
             
             //Ispisujem tekst za frequency
             transactionFrequency.innerHTML = 'Transaction frequency ID:'+ transactionObject.frequency;
