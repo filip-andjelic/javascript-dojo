@@ -74,6 +74,16 @@
 		// THIS IS HOW YOU GET ELEMENT BY ITS UNIQUE ID IDENTIFIER.
 		const applicationElement = document.getElementById('Application');
 
+        applicationElement.style.display = "flex"; 
+        applicationElement.style.flexDirection = 'row';
+        applicationElement.style.flexWrap = 'wrap';
+        applicationElement.style.justifyContent = "center";
+        applicationElement.style.color = "#333333";
+        applicationElement.style.fontSize = '14px';
+        applicationElement.style.padding = '10px';
+        applicationElement.style.textAlign = 'center';
+         
+        
 		/*applicationElement.style.backgroundColor = '#2f619166';
 		applicationElement.style.width = '70%';
 		applicationElement.style.height = '100%';
@@ -114,6 +124,49 @@
 			transactionName.style.textShadow = '1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue';
 
 			transactionWrapper.appendChild(transactionName);
+            
+ const testwraper = document.createElement('div');      
+
+        testwraper.style.display = 'flex';
+        testwraper.innerHTML = 
+            transactionWrapper.style.backgroundColor = transactionObject.color;
+			transactionWrapper.style.borderRadius = '16px';
+			transactionWrapper.style.border = '2px solid #333333';
+			transactionWrapper.style.margin = '5%';
+			transactionWrapper.style.overflow = 'hidden';
+			transactionWrapper.style.width = '40%';
+			transactionWrapper.style.boxSizing = 'border-box';
+        transactionWrapper.appendChild(testwraper);
+        
+const transactionDescription = document.createElement('div'); 
+            transactionDescription.innerHTML = transactionObject.description;
+
+			transactionDescription.style.display = 'flex';
+			transactionDescription.style.alignItems = 'center';
+			transactionDescription.style.flexDirection = 'row';
+			transactionDescription.style.color = '#333333';
+			transactionDescription.style.fontSize = '14px';
+			transactionDescription.style.padding = '10px';
+			transactionDescription.style.margin = '10px';
+			transactionDescription.style.border = '1px solid #333333';
+			transactionDescription.style.borderRadius = '18px';
+
+			transactionWrapper.appendChild(transactionDescription);
+            
+const  transactionDateAndFrequency = document.createElement ('div'); 
+            transactionDateAndFrequency.style.display = 'flex';
+			transactionDateAndFrequency.style.alignItems = 'center';
+			transactionDateAndFrequency.style.justifyContent = 'space-between';
+			transactionDateAndFrequency.style.flexDirection = 'row';
+			transactionDateAndFrequency.style.color = '#333333';
+			transactionDateAndFrequency.style.fontSize = '14px';
+			transactionDateAndFrequency.style.padding = '10px';
+			transactionDateAndFrequency.style.textAlign = 'center';
+            
+            transactionWrapper.appendChild(transactionDateAndFrequency);
+             
+
+        
 
 			/*let transactionDateAndFrequency = document.createElement('div');
 			let transactionDate = document.createElement('div');
