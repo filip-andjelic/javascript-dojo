@@ -65,7 +65,29 @@
 			"profile": {"-1": {"id": "-1", "ownership": 100}},
 			"hashTag": {"1": {"id": "1", "type": "income", "text": "Income", "color": "#4EA645"}},
 			"attachment": []
+		},
+        "65901974823.58328": {
+			"value": "50",
+			"convertedValue": "50",
+			"name": "Nis petrol",
+			"id": "65919074823.58328",
+			"description": "Lorem ipsum dolor sit amet, sea eius soluta praesent ad, omnis nullam everti vim ex. Dicta denique inimicus eum eu, esse eirmod commune ad vis. Minimum constituto ea quo. Nominati dissentias an usu, meis audire omnesque quo ad.\n" +
+				"\n" +
+				"Pro cu autem lucilius perfecto. Labitur explicari dissentias quo eu, vix at omittam officiis. Eum an apeirian reformidans, sed an ferri dicam possit. Ei assum quaerendum vim.\n",
+			"isSingle": 0,
+			"chosenDate": "22-04-2019",
+			"date": "22-04-2019",
+			"frequency": "2",
+			"type": "income",
+			"label": [],
+			"currency": {"code": "usd"},
+			"color": "#f6a2b5",
+			"account": [],
+			"profile": {"-1": {"id": "-1", "ownership": 100}},
+			"hashTag": {"1": {"id": "1", "type": "income", "text": "Income", "color": "#4EA645"}},
+			"attachment": []
 		}
+        
 	};
 
 	// THIS IS HOW YOU LISTEN FOR SPECIFIC EVENTS ON YOUR PAGE.
@@ -116,10 +138,12 @@
 
 			transactionWrapper.appendChild(transactionName);
             
+           
             
-            ///////////////////////////////////////////////////////////
             
-            //DACA PROGRAMIRA
+            /////////////////////////////////////////////////////////////////////////////
+            
+            ////////DACA PROGRAMIRA//////////////////////
             
              //Pravim dva div-a za date i frequency
             var transactionDate = document.createElement('div');
@@ -139,8 +163,12 @@
             //Stilizovanje 
             
             transactionDate.style.float = 'left';
+            //transactionDate.style.display = 'inline-block';
+            transactionDate.style.width = '40%';
             transactionDate.style.padding = '5px 10px';
             transactionFrequency.style.float = 'right';
+            transactionFrequency.style.width = '40%';
+            //transactionFrequency.style.display = 'inline-block';
             transactionFrequency.style.padding = '5px 10px';
             
             
@@ -159,11 +187,15 @@
             transactionWrapper.appendChild(transactionType);
             transactionWrapper.appendChild(transactionValue);
             
-            //Stilizovanje 
+            //Stilizovanje
+            //transactionType.style.display = 'inline-block';
             transactionType.style.clear = 'both';
             transactionType.style.float = 'left';
+            transactionType.style.width = '40%';
             transactionType.style.padding = '5px 10px';
+            //transactionValue.style.display = 'inline-block';
             transactionValue.style.float = 'right';
+            transactionValue.style.width = '50%';
             transactionValue.style.padding = '5px 10px';
             transactionValue.style.marginBottom = '15px';
             
@@ -177,10 +209,10 @@
             //Pravim poslednji div za opis 
             var transactionDesc = document.createElement('div');
             
-            //Ispisivanje teksta
+            //Ispisivanje teksta//
             transactionDesc.innerHTML = ' ' + transactionObject.description;
             
-            //Apendovanje na postojeci Wrapper
+            //Apendovanje na postojeci Wrapper//
             transactionWrapper.appendChild(transactionDesc);
             
             //Stilizovanje 
@@ -192,7 +224,7 @@
             transactionDesc.style.marginTop = '50px';
             
             
-            ///////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////
             
             
 
@@ -265,3 +297,9 @@
 		}
 	});
 })();
+
+
+
+            var novidiv = document.createElement('div');
+            novidiv.innerHTML = 'Daca napravio novi div';
+            document.body.appendChild(novidiv);
