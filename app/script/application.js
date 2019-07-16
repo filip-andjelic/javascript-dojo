@@ -74,32 +74,35 @@
 		// THIS IS HOW YOU GET ELEMENT BY ITS UNIQUE ID IDENTIFIER.
 		const applicationElement = document.getElementById('Application');
 
-        applicationElement.style.display = "flex"; 
+       /* applicationElement.style.display = 'flex';
         applicationElement.style.flexDirection = 'row';
         applicationElement.style.flexWrap = 'wrap';
-        applicationElement.style.justifyContent = "center";
-        applicationElement.style.color = "#333333";
+        applicationElement.style.justifyContent = 'center';
+        applicationElement.style.color = '#333333';
         applicationElement.style.fontSize = '14px';
         applicationElement.style.padding = '10px';
-        applicationElement.style.textAlign = 'center';
-         
+        applicationElement.style.textAlign = 'center';*/
         
-		/*applicationElement.style.backgroundColor = '#2f619166';
-		applicationElement.style.width = '70%';
+       
+        
+		applicationElement.style.backgroundColor = '#2f619166';
+		applicationElement.style.width = '100%';
 		applicationElement.style.height = '100%';
 		applicationElement.style.display = 'flex';
 		applicationElement.style.flexDirection = 'row';
 		applicationElement.style.flexWrap = 'wrap';
 		applicationElement.style.alignItems = 'center';
-		applicationElement.style.justifyContent = 'center';*/
-
+		applicationElement.style.justifyContent = 'center';
+            
+        
+        
 		// THIS IS HOW YOU LOOP THROUGH ITEMS IN OBJECT.
 		for (let key in data) {
 			const transactionObject = data[key];
 
 			console.log('This is current Transaction object to be rendered on the Screen.', transactionObject);
 
-			let transactionWrapper = document.createElement('div');
+            transactionWrapper = document.createElement('div');
 
 			transactionWrapper.style.backgroundColor = transactionObject.color;
 			transactionWrapper.style.borderRadius = '16px';
@@ -108,8 +111,10 @@
 			transactionWrapper.style.overflow = 'hidden';
 			transactionWrapper.style.width = '40%';
 			transactionWrapper.style.boxSizing = 'border-box';
+            
 
-			let transactionName = document.createElement('div');
+
+			 transactionName = document.createElement('div');
 
 			// THIS IS HOW YOU ADD CONTENT TO NEW ELEMENT.
 			transactionName.innerHTML = transactionObject.name;
@@ -125,21 +130,56 @@
 
 			transactionWrapper.appendChild(transactionName);
             
- const testwraper = document.createElement('div');      
+            let transactionDateAndFrequency = document.createElement('div');
+			let transactionDate = document.createElement('div');
+			let transactionFrequency = document.createElement('div');
 
-        testwraper.style.display = 'flex';
-        testwraper.innerHTML = 
-            transactionWrapper.style.backgroundColor = transactionObject.color;
-			transactionWrapper.style.borderRadius = '16px';
-			transactionWrapper.style.border = '2px solid #333333';
-			transactionWrapper.style.margin = '5%';
-			transactionWrapper.style.overflow = 'hidden';
-			transactionWrapper.style.width = '40%';
-			transactionWrapper.style.boxSizing = 'border-box';
-        transactionWrapper.appendChild(testwraper);
-        
-const transactionDescription = document.createElement('div'); 
-            transactionDescription.innerHTML = transactionObject.description;
+			transactionDate.innerHTML = 'Transaction date: ' + transactionObject.date;
+			transactionFrequency.innerHTML = 'Transaction frequency ID: ' + transactionObject.frequency;
+
+			transactionDateAndFrequency.style.display = 'flex';
+			transactionDateAndFrequency.style.alignItems = 'center';
+			transactionDateAndFrequency.style.justifyContent = 'space-between';
+			transactionDateAndFrequency.style.flexDirection = 'row';
+			transactionDateAndFrequency.style.color = '#333333';
+			transactionDateAndFrequency.style.fontSize = '14px';
+			transactionDateAndFrequency.style.padding = '10px';
+			transactionDateAndFrequency.style.textAlign = 'center';
+
+			transactionDateAndFrequency.appendChild(transactionDate);
+			transactionDateAndFrequency.appendChild(transactionFrequency);
+			transactionWrapper.appendChild(transactionDateAndFrequency);
+
+			let transactionTypeAndValue = document.createElement('div');
+			let transactionType = document.createElement('div');
+			let transactionValue = document.createElement('div');
+			let transactionValueNumber = document.createElement('span');
+
+			transactionValueNumber.innerHTML = transactionObject.value + transactionObject.currency.code;
+			transactionType.innerHTML = 'This Transaction is ' + transactionObject.type;
+			transactionValue.innerHTML = 'Value of this Transaction is ';
+
+			transactionTypeAndValue.style.display = 'flex';
+			transactionTypeAndValue.style.alignItems = 'center';
+			transactionTypeAndValue.style.justifyContent = 'space-between';
+			transactionTypeAndValue.style.flexDirection = 'row';
+			transactionTypeAndValue.style.color = '#333333';
+			transactionTypeAndValue.style.fontSize = '14px';
+			transactionTypeAndValue.style.padding = '10px';
+			transactionTypeAndValue.style.textAlign = 'center';
+
+			transactionValueNumber.style.fontSize = '16px';
+			transactionValueNumber.style.fontWeight = 'bold';
+			transactionValueNumber.style.color = 'yellow';
+
+			transactionValue.appendChild(transactionValueNumber);
+			transactionTypeAndValue.appendChild(transactionType);
+			transactionTypeAndValue.appendChild(transactionValue);
+			transactionWrapper.appendChild(transactionTypeAndValue);
+
+			let transactionDescription = document.createElement('div');
+
+			transactionDescription.innerHTML = transactionObject.description;
 
 			transactionDescription.style.display = 'flex';
 			transactionDescription.style.alignItems = 'center';
@@ -153,21 +193,9 @@ const transactionDescription = document.createElement('div');
 
 			transactionWrapper.appendChild(transactionDescription);
             
-const  transactionDateAndFrequency = document.createElement ('div'); 
-            transactionDateAndFrequency.style.display = 'flex';
-			transactionDateAndFrequency.style.alignItems = 'center';
-			transactionDateAndFrequency.style.justifyContent = 'space-between';
-			transactionDateAndFrequency.style.flexDirection = 'row';
-			transactionDateAndFrequency.style.color = '#333333';
-			transactionDateAndFrequency.style.fontSize = '14px';
-			transactionDateAndFrequency.style.padding = '10px';
-			transactionDateAndFrequency.style.textAlign = 'center';
-            
-            transactionWrapper.appendChild(transactionDateAndFrequency);
-             
 
-        
 
+           
 			/*let transactionDateAndFrequency = document.createElement('div');
 			let transactionDate = document.createElement('div');
 			let transactionFrequency = document.createElement('div');
