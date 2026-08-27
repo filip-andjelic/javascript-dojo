@@ -65,7 +65,29 @@
 			"profile": {"-1": {"id": "-1", "ownership": 100}},
 			"hashTag": {"1": {"id": "1", "type": "income", "text": "Income", "color": "#4EA645"}},
 			"attachment": []
+		},
+        "65901974823.58328": {
+			"value": "50",
+			"convertedValue": "50",
+			"name": "Nis petrol",
+			"id": "65919074823.58328",
+			"description": "Lorem ipsum dolor sit amet, sea eius soluta praesent ad, omnis nullam everti vim ex. Dicta denique inimicus eum eu, esse eirmod commune ad vis. Minimum constituto ea quo. Nominati dissentias an usu, meis audire omnesque quo ad.\n" +
+				"\n" +
+				"Pro cu autem lucilius perfecto. Labitur explicari dissentias quo eu, vix at omittam officiis. Eum an apeirian reformidans, sed an ferri dicam possit. Ei assum quaerendum vim.\n",
+			"isSingle": 0,
+			"chosenDate": "22-04-2019",
+			"date": "22-04-2019",
+			"frequency": "2",
+			"type": "income",
+			"label": [],
+			"currency": {"code": "usd"},
+			"color": "#f6a2b5",
+			"account": [],
+			"profile": {"-1": {"id": "-1", "ownership": 100}},
+			"hashTag": {"1": {"id": "1", "type": "income", "text": "Income", "color": "#4EA645"}},
+			"attachment": []
 		}
+        
 	};
 
 	// THIS IS HOW YOU LISTEN FOR SPECIFIC EVENTS ON YOUR PAGE.
@@ -75,6 +97,7 @@
 		const applicationElement = document.getElementById('Application');
 
 		applicationElement.style.backgroundColor = '#2f619166';
+		//applicationElement.style.backgroundColor = 'red';
 		applicationElement.style.width = '100%';
 		applicationElement.style.height = '100%';
 		applicationElement.style.display = 'flex';
@@ -114,6 +137,96 @@
 			transactionName.style.textShadow = '1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue';
 
 			transactionWrapper.appendChild(transactionName);
+            
+           
+            
+            
+            /////////////////////////////////////////////////////////////////////////////
+            
+            ////////DACA PROGRAMIRA//////////////////////
+            
+             //Pravim dva div-a za date i frequency
+            var transactionDate = document.createElement('div');
+            var transactionFrequency = document.createElement('div');
+            
+            //Ispisujem tekst za date
+            transactionDate.innerHTML = 'Transaction date : ' + transactionObject.date;
+            
+            //Ispisujem tekst za frequency
+            transactionFrequency.innerHTML = 'Transaction frequency ID:'+ transactionObject.frequency;
+            
+            // Apendujem na postojeci Wrapper div da bi se prikazali
+            transactionWrapper.appendChild(transactionDate);
+            transactionWrapper.appendChild(transactionFrequency);
+            
+           
+            //Stilizovanje 
+            
+            transactionDate.style.float = 'left';
+            //transactionDate.style.display = 'inline-block';
+            transactionDate.style.width = '40%';
+            transactionDate.style.padding = '5px 10px';
+            transactionFrequency.style.float = 'right';
+            transactionFrequency.style.width = '40%';
+            //transactionFrequency.style.display = 'inline-block';
+            transactionFrequency.style.padding = '5px 10px';
+            
+            
+            // Pravim sledeca dva div-a za vrstu transakcije i vrednost trans
+            var transactionType = document.createElement('div');
+            var transactionValue = document.createElement('div');
+            
+            
+            //Ispisujem tekst za vrstu transakcije
+            transactionType.innerHTML = 'This transaction is '+ transactionObject.type;
+            
+            //Ispsisujem tekst za vrednost transakcije
+            transactionValue.innerHTML = 'Value of this Transaction is ' + ' ' + '<span style="font-weight:bold; color:yellow ">' +   transactionObject.value + ' ' + transactionObject.currency.code + '</span>';
+            
+            // Apendujem na postojeci Wrapper div da bi se prikazali
+            transactionWrapper.appendChild(transactionType);
+            transactionWrapper.appendChild(transactionValue);
+            
+            //Stilizovanje
+            //transactionType.style.display = 'inline-block';
+            transactionType.style.clear = 'both';
+            transactionType.style.float = 'left';
+            transactionType.style.width = '40%';
+            transactionType.style.padding = '5px 10px';
+            //transactionValue.style.display = 'inline-block';
+            transactionValue.style.float = 'right';
+            transactionValue.style.width = '50%';
+            transactionValue.style.padding = '5px 10px';
+            transactionValue.style.marginBottom = '15px';
+            
+            //bold.style.color = "yellow";
+            //bold.style.fontWeight = "bold";
+            //bold.style.fontSize = "15px";
+            
+            
+            
+            
+            //Pravim poslednji div za opis 
+            var transactionDesc = document.createElement('div');
+            
+            //Ispisivanje teksta//
+            transactionDesc.innerHTML = ' ' + transactionObject.description;
+            
+            //Apendovanje na postojeci Wrapper//
+            transactionWrapper.appendChild(transactionDesc);
+            
+            //Stilizovanje 
+            transactionDesc.style.clear = 'both';
+            transactionDesc.style.padding = '15px';
+            transactionDesc.style.border = '1px solid black';
+            transactionDesc.style.borderRadius = '16px';
+            transactionDesc.style.margin = '20px 10px';
+            transactionDesc.style.marginTop = '50px';
+            
+            
+            //////////////////////////////////////////////////////////////////
+            
+            
 
 			/*let transactionDateAndFrequency = document.createElement('div');
 			let transactionDate = document.createElement('div');
@@ -184,3 +297,9 @@
 		}
 	});
 })();
+
+
+
+            var novidiv = document.createElement('div');
+            novidiv.innerHTML = 'Daca napravio novi div';
+            document.body.appendChild(novidiv);
